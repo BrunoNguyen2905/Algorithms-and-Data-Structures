@@ -7,6 +7,35 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+
+//STRING DO NOT HAVE ACCESS TO EVERY HELPER(SUCH AS EVERY, REDUCE,FOREACH...).IT'S ONLY ARRAY
+
+function palindrome(str) {
+    // //THIS SOLUTION IS NOT IDEAL
+    // return str.split('').every((char, i) => {
+    //     return char === str[str.length -i -1] // boolean value
+    // });
+
+    //FIRST SOLUTION-- my solution //IDEAL
+    // if(str.split('').reverse().join('') == str)
+    //     return true;
+    // else
+    //     return false;
+    // }
+
+    //SECOND SOLUTION-- my solution
+    // let reversed ='';
+    // for(let character of str){
+    //     reversed = character + reversed;
+    // }
+    // if(reversed == str) return true;
+    // else return false;
+
+    //THIRD SOLUTION-- from Author //IDEAL
+    const reversed = str.split('').reverse().join('');
+
+    return str === reversed // return boolean value 
+
+}
 
 module.exports = palindrome;

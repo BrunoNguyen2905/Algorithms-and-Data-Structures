@@ -27,9 +27,10 @@ function reverse(str) {
     // return reversed;
     
     //THIRD SOLUTION
-    //debugger; // need to call function manually so that it will invoke the reverse function
+    //debugger; // need to call function manually so that it will invoke the reverse function ==> will impress ur interviewer
     return str.split('').reduce((rev, char) => char + rev, '');
 }
+reverse("abcde");
 
     
 module.exports = reverse;
