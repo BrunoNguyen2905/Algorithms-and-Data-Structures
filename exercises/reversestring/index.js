@@ -7,7 +7,7 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-    //first solution
+    //FIRST SOLUTION
     // const arr = str.split('');
     // arr.reverse();
     // return arr.join('');
@@ -17,7 +17,7 @@ function reverse(str) {
 
     // return str.split('').reverse().join('');
 
-    // //second solution
+    // //SECOND SOLUTION
     // let reversed = '';
     // //for(var i=0; i < str.length; i ++){ dont use this old one
        
@@ -26,8 +26,9 @@ function reverse(str) {
     // }
     // return reversed;
     
-    //third solution
-     str.split('').reduce
+    //THIRD SOLUTION
+    //debugger; // need to call function manually so that it will invoke the reverse function
+    return str.split('').reduce((rev, char) => char + rev, '');
 }
 
     
